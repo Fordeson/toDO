@@ -31,6 +31,7 @@ class EditViewController: UIViewController {
     private var lastSelectDate: NSDate!
     
     @IBOutlet weak var themeField: UITextField!
+    @IBOutlet weak var colorIndicatorView: UIView!
     
     @IBOutlet weak var descTextView: UITextView!
     @IBOutlet var colorBtn: [UIButton]!
@@ -38,13 +39,17 @@ class EditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let radius = ((self.colorBtn.first)?.frame.size.height)! / 3
+        let radius = ((self.colorBtn.first)?.frame.size.height)! / 2
         for btn in self.colorBtn {
             btn.layer.cornerRadius = radius
             btn.layer.masksToBounds = true
         }
         self.descTextView.layer.cornerRadius = 5
         self.descTextView.layer.masksToBounds = true
+        self.colorIndicatorView.layer.cornerRadius = self.colorIndicatorView.frame.size.width / 2
+        self.colorIndicatorView.layer.masksToBounds = true
+        let redBtn = self.colorBtn.first!
+        self.selectedColor = redBtn.backgroundColor
         initDatePickerView()
         self.descTextView.delegate = self
         self.themeField.delegate = self
@@ -70,8 +75,6 @@ class EditViewController: UIViewController {
 
     }
     @IBAction func dueDateBeginEdit(sender: UITextField) {
-        self.lastSelectDate = self.datePickerView.date
-        self.dueDateField.text = self.dateFormatter.stringFromDate(self.lastSelectDate)
         self.dueDateField.inputView = self.datePickerView
     }
     
@@ -92,7 +95,10 @@ class EditViewController: UIViewController {
     
     @IBAction func colorBtnClick(sender: UIButton) {
         self.selectedColor = sender.backgroundColor
-        self.navigationItem.rightBarButtonItem?.tintColor = self.selectedColor
+        let newCenter = sender.center
+        UIView.animateWithDuration(0.25) {
+            self.colorIndicatorView.center = newCenter
+        }
     }
 
     @IBAction func doneBtnClick(sender: UIBarButtonItem) {

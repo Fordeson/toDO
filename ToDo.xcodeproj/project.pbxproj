@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B823E7DD1D1BB3720002913C /* NSDate+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B823E7DC1D1BB3720002913C /* NSDate+Utility.swift */; };
 		B83B80B01D1926F9008E29FA /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B80AF1D1926F9008E29FA /* DropDownMenu.swift */; };
 		B83B80B81D192E37008E29FA /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B80B71D192E37008E29FA /* SortViewController.swift */; };
 		B85E73381D17D9220088B773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E73371D17D9220088B773 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B823E7DC1D1BB3720002913C /* NSDate+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Utility.swift"; sourceTree = "<group>"; };
 		B83B80AF1D1926F9008E29FA /* DropDownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
 		B83B80B71D192E37008E29FA /* SortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortViewController.swift; path = ../SortViewController.swift; sourceTree = "<group>"; };
 		B85E73341D17D9220088B773 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				B85E73741D17E4B70088B773 /* CoreDataStack.swift */,
 				B83B80AF1D1926F9008E29FA /* DropDownMenu.swift */,
 				B865C2E51D1948ED00822956 /* SortCell.swift */,
+				B823E7DC1D1BB3720002913C /* NSDate+Utility.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				B85E736F1D17E2620088B773 /* ToDoCell.swift in Sources */,
 				B85E73671D17D9540088B773 /* ToDo.xcdatamodeld in Sources */,
 				B85E73751D17E4B70088B773 /* CoreDataStack.swift in Sources */,
+				B823E7DD1D1BB3720002913C /* NSDate+Utility.swift in Sources */,
 				B85E73731D17E4370088B773 /* ToDo.swift in Sources */,
 				B85E73721D17E4370088B773 /* ToDo+CoreDataProperties.swift in Sources */,
 				B83B80B81D192E37008E29FA /* SortViewController.swift in Sources */,
